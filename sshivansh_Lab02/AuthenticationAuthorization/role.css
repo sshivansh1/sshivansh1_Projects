@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+table
+{
+    border: 3px black solid;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td
+{
+    border: 2px black solid;
+}
+.addRoleDiv
+{
+    margin-top: 20px;
+    text-align: center;
+    border: 3px brown solid;
+    padding: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+body
+{
+    background-color: mediumaquamarine;
+    font-family: 'Rubik', sans-serif;
+}
+.statusDiv, .deleteStatus
+{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+input
+{
+    font-family: 'Rubik', sans-serif;
+}
+h1, footer
+{
+    text-align: center;
+    padding: 15px;
+    background-color: coral;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+footer
+{
+    font-weight: bold;
+    margin-right: 40%;
+    margin-left: 40%;
+}

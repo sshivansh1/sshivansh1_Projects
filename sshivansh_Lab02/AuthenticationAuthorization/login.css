@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+body
+{
+    background-color: mediumaquamarine;
+    font-family: 'Rubik', sans-serif;
+}
+h1
+{
+    font-size: 35px;
+}
+h1, footer
+{
+    text-align: center;
+    padding: 15px;
+    background-color: coral;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+footer
+{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.userInfo
+{
+    text-align: center;
+    border: 3px maroon solid;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 25px;
+    border-radius: 6px;
+}
+.userInfo, input
+{
+    font-size: 18px;
+}
+
+input
+{
+    font-family: 'Rubik', sans-serif;
+}
+.registerBtn
+{
+    margin-top: 3px;
+    width: 15%;
+    border-radius: 5px;
+}
+.loginBtn
+{
+    margin-top: 2px;
+    border-radius: 5px;
+    width: 15%;
+}
+.loginBtn:hover, .registerBtn:hover
+{
+    background-color: lightcoral;
+    cursor: pointer;
+}
