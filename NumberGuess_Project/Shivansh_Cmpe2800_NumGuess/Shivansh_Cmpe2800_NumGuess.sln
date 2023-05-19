@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{D61C4451-4B30-46CF-9FF5-DE0F7E15B68D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{0956AA5A-A007-40CB-A935-CAD497835411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnLibrary", "ConnDlg\ConnLibrary.csproj", "{47BBD830-D99E-44BB-BB9D-15D279B15A08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D61C4451-4B30-46CF-9FF5-DE0F7E15B68D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61C4451-4B30-46CF-9FF5-DE0F7E15B68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61C4451-4B30-46CF-9FF5-DE0F7E15B68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61C4451-4B30-46CF-9FF5-DE0F7E15B68D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0956AA5A-A007-40CB-A935-CAD497835411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0956AA5A-A007-40CB-A935-CAD497835411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0956AA5A-A007-40CB-A935-CAD497835411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0956AA5A-A007-40CB-A935-CAD497835411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47BBD830-D99E-44BB-BB9D-15D279B15A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47BBD830-D99E-44BB-BB9D-15D279B15A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47BBD830-D99E-44BB-BB9D-15D279B15A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47BBD830-D99E-44BB-BB9D-15D279B15A08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E75EE5FF-C749-4753-814E-919638715D61}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN2019 - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
