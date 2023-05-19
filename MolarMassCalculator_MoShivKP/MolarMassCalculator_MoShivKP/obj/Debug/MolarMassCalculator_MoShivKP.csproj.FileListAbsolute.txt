@@ -1,0 +1,10 @@
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\bin\Debug\MolarMassCalculator_MoShivKP.exe.config
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\bin\Debug\MolarMassCalculator_MoShivKP.exe
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\bin\Debug\MolarMassCalculator_MoShivKP.pdb
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\obj\Debug\MolarMassCalculator_MoShivKP.csproj.AssemblyReference.cache
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\obj\Debug\MolarMassCalculator_MoShivKP.MMC_Form.resources
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\obj\Debug\MolarMassCalculator_MoShivKP.Properties.Resources.resources
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\obj\Debug\MolarMassCalculator_MoShivKP.csproj.GenerateResource.cache
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\obj\Debug\MolarMassCalculator_MoShivKP.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\obj\Debug\MolarMassCalculator_MoShivKP.exe
+C:\Users\ASUS\Downloads\Group project 1\MolarMassCalculator_MoShivKP\MolarMassCalculator_MoShivKP\obj\Debug\MolarMassCalculator_MoShivKP.pdb
