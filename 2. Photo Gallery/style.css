@@ -1,0 +1,54 @@
+/* To make sure that the dimensions of any box includes its border and padding, */
+/* this gives us an easy way of sizing our elements */
+*{
+  box-sizing: border-box;  
+}
+h1
+{
+    text-align: center;
+    background: linear-gradient(to right, pink, blue);
+    font-family: sans-serif;
+    padding: 10px;
+    color: antiquewhite;
+    outline: 3px ridge black;
+}
+body
+{
+    background: linear-gradient(90deg, ghostwhite, pink, blue);
+}
+.container
+{
+    display: flex; /*converts the container to a flex box*/
+    flex-wrap: wrap; /*so there are no overflowing elements on the right side of the webpage */
+}
+
+.column
+{
+    flex: 1; /*to set the width of each element */
+    min-width: 300px;
+}
+/* 
+.column:nth-child(1)
+{
+    background-color: orangered;
+}
+.column:nth-child(2)
+{
+    background-color: yellow;
+}
+.column:nth-child(3)
+{
+    background-color: green;
+}
+
+.column:nth-child(4)
+{
+    background-color: blueviolet;
+} */
+
+img{
+    margin: 2px 4px;
+    width: 100%;
+    border : 2px solid palevioletred;
+    border-radius: 10px;
+}
