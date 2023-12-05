@@ -18,7 +18,14 @@ style button
 style footer
 
 use media queries */
-
+.navbar li
+{
+    font-size: 20px;
+}
+.navbar li:hover
+{
+    border-bottom: 2px solid yellow;
+}
 .logo
 {
     width: 50px;
@@ -27,23 +34,54 @@ use media queries */
 }
 .jumbotron{
     background: transparent;
-    color: antiquewhite;
+    color: burlywood;
     text-align: center;
-    padding: 50px;
+    padding: 60px;
     letter-spacing: 2.5px;
+    margin-top: 20px;
 }
+
+
 .bodyimage{
     height: 130px;
 }
-
 .col-md-4
 {
     text-align: center;
     color: white;
 }
-
 .col-md-4 p
 {
     color: whitesmoke;
     font-size: 18px;
+}
+.contactBtn{
+    text-align: center;
+    margin-top: 60px;
+    opacity: 0.8;
+    color: white;
+}
+.btn
+{
+ background: linear-gradient(90deg, blue, red, yellow);
+ border: none;
+ border-radius: 10px;
+ color: #fff;
+ font-size: 18px;
+ padding: 10px 70px;
+ letter-spacing: 1.3px;
+}
+
+.btn:hover{
+    border: 2px white ridge;
+    opacity: 1;
+    color: white;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: grey;
+    font-size: 15px;
+    padding: 10px 0;
+    margin-top: 70px;
 }
