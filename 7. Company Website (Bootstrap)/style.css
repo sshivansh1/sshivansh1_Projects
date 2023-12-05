@@ -1,3 +1,10 @@
+body
+{
+    background: url(https://freenaturestock.com/wp-content/uploads/freenaturestock-2192-1024x1536.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: cursive;
+}
 /* Add background
 
 style brand
@@ -17,4 +24,26 @@ use media queries */
     width: 50px;
     height: 50px;
     margin-top: -15px;
+}
+.jumbotron{
+    background: transparent;
+    color: antiquewhite;
+    text-align: center;
+    padding: 50px;
+    letter-spacing: 2.5px;
+}
+.bodyimage{
+    height: 130px;
+}
+
+.col-md-4
+{
+    text-align: center;
+    color: white;
+}
+
+.col-md-4 p
+{
+    color: whitesmoke;
+    font-size: 18px;
 }
