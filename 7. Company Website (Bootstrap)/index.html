@@ -6,15 +6,47 @@
   <title> Company Website (Bootstrap)</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>     
+
   <!-- Create our navigation bar -->
+  <nav role = "navigation" class = "navbar navbar-expand-lg navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- the navbar header -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="images/brand-logo.png" class="logo"></a>
+            <button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    
+        <div class="navbar-collapse collapse"  id ="navbarCollapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  
     <!-- Header for the webstie -- jumbotron -->
+    <div class="jumbotron">
+        <div class="container">
+           <h1> Revolutionize Your Online Presence: Unleash the Power of a Stunning Website!"</h1>
+        </div>
+    </div>
+
     <!-- Create icons with text -- general information  -->
     <!-- A contact button -->
     <!-- Lastly, a footer -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 
 </html>

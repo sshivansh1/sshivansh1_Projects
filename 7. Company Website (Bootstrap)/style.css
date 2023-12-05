@@ -11,3 +11,10 @@ style button
 style footer
 
 use media queries */
+
+.logo
+{
+    width: 50px;
+    height: 50px;
+    margin-top: -15px;
+}
