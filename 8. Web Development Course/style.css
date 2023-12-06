@@ -1,2 +1,5 @@
 /* Add a video as the background of the whole body*/
-
+#bgVideo
+{
+    position: fixed;
+}
