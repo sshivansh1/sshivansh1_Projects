@@ -8,6 +8,10 @@
     z-index: -100;
     filter: blur(4px);
 }
+.container
+{
+  min-width: 300px;
+}
 
 .jumbotron
 {
@@ -74,6 +78,60 @@
   right: auto;
 }
 
+.footer{
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.8), rgba(75, 0, 130, 0.8), rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8), rgba(255, 255, 0, 0.8) );
+  color: ghostwhite;
+  font-size: 18px;
+  padding: 10px 0;
+  margin-top: 70px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+
+}
+
+@media (max-width:768px){
+#myCarousel
+{
+  height: 350px;
+}
+.carousel-inner .item img
+{
+  height: 200px;
+}
+.carousel-caption h2{
+  font-size: 22px;
+}
+.navbar-custom .navbar-brand {
+  font-size: 16px;
+}
+
+.footer{
+  color: yellow;
+}
+}
+
+@media (max-width:400px){
+ #myCarousel
+{
+  height: 250px;
+}
+.carousel-inner .item img
+{
+  height: 130px;
+}
+.carousel-caption h2{
+  font-size: 18px;
+}
+.navbar-custom .navbar-brand {
+  color: #f9fbff;
+  font-size: 12px;
+}
+
+.footer{
+  color: orange;
+}
+}
 
 .navbar-custom {
     font-family: cursive;
