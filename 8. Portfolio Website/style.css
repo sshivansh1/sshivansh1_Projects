@@ -6,7 +6,75 @@
     height: 100%;
     width: 100%;
     z-index: -100;
+    filter: blur(4px);
 }
+
+.jumbotron
+{
+    background:transparent;
+    color: white;
+    padding-top: 8%;
+    text-align: center;
+}
+.jumbotron h1{
+  text-shadow: 2px 3px 0 orangered;
+}
+
+.jumbotron h2
+{
+    color: ghostwhite
+}
+.jumbotron button{
+  width: 150px;
+  margin-top: 25px;
+}
+.jumbotron button:hover{
+  font-size: 19px;
+  outline: 1px solid orange;
+}
+
+.aboutImage{
+  height: 100px;
+}
+.container
+{
+  max-width: 1000px;
+}
+#about
+{
+  text-align: center;
+  color: ghostwhite;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+#projects
+{
+  padding-top: 50px;
+}
+
+#myCarousel
+{
+  width: 50%;
+  margin: 0 auto; /*center the carousel*/
+  text-align: center;
+  height: 500px;
+}
+
+.carousel-inner .item img
+{
+  margin: 0 auto; /*center the inner image*/
+  height: 350px;
+}
+
+.carousel-caption
+{
+  position: relative;
+  left: auto;
+  right: auto;
+}
+
+
 .navbar-custom {
     font-family: cursive;
     font-size: larger;
