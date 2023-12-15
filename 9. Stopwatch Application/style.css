@@ -1,0 +1,43 @@
+body{
+  background: url(images/freenaturestock-2118.jpg) center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+#header
+{
+  text-align: center;
+  font-size: 6vw;
+}
+
+#lap{
+  text-align: right;
+  font-size: 3vw;
+}
+
+#time{
+  text-align: center;
+  font-size: 9vw;
+}
+
+.control
+{
+  background: radial-gradient(orange, orangered);
+  border-radius: 100%; /*to make a circle*/
+  text-align: center;
+  line-height: 10vw;
+  height: 10vw;
+  width: 10vw;
+  font-size: 2vw;
+  cursor: pointer;
+}
+
+.control:hover{
+  background: radial-gradient(orange, white);
+  color: orangered;
+}
+
+#laps{
+  max-height: 270px;
+  overflow-y: scroll;
+}
