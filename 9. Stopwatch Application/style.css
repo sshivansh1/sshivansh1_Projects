@@ -41,3 +41,21 @@ body{
   max-height: 270px;
   overflow-y: scroll;
 }
+
+.lap{
+  font-size: 23px;
+  border-bottom: 1px solid ghostwhite;
+  margin: 15px;
+  font-family: cursive;
+  border-style: inset;
+}
+
+.laptimetitle{
+  float: left;
+  color: cornsilk;
+}
+
+.laptimeinfo{
+  float: right;
+  color: cornsilk;
+}
