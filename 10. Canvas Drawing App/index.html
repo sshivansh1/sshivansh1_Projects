@@ -23,14 +23,45 @@
             <input type="color" id="paintColor" list>
         </div>
 
-        <div id = "brushSize"></div>
+        <div class="input" id="thicknessInput">
+            <div id = "brushSize"></div>
+        </div>
 
         <div class="input" id="sizeInput">
             <div id="sizeSlider"></div>
             <label for="sizeSlider" id="sliderLabel"></label>
         </div>
-        
     </div>
+
+
+    <!-- Canvas Drawing Area     -->
+    <div id="canvasContainer">
+        <canvas id="paint" width="500px" height="400px"></canvas>
+    </div>
+
+    
+    <!-- button inputs area -->
+    <div id="buttonsContainer">
+        <div class="input2">
+            <span id="erase" class="button">Erase</span>
+        </div>
+           
+            <!--Save-->
+        <div class="input2">
+            <span id="save" class="button">Save</span>
+        </div>
+           
+            <!--Reset-->
+        <div class="input2">
+            <span id="reset" class="button">Reset</span>
+        </div>
+    </div>
+
+    <div >
+
+    </div>
+
+
 
     <!-- Add a footer -->
     <div class="footer">
