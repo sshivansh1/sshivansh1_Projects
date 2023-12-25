@@ -12,4 +12,11 @@ $(document).ready(function () {
     });
 
     $("#sliderLabel").html( $( "#sizeSlider" ).slider( "value" ) );
+
+    var context = $("#paint").getContext('2d');
+
+    //draw a line
+    //declaring a new path
+    
+
 });
