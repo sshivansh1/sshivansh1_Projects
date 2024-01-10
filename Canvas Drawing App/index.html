@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Canvas Drawing Application</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/start/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  <script src="index.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Headline of the page -->
+   <div id="header" class="jumbotron"><h1>Canvas Drawing Application</h1></div>
+
+    <!-- control inputs area -->
+    <div class="inputContainer">
+        <div class="input" id="colorInput">
+            <input type="color" id="paintColor" list>
+        </div>
+
+        <div class="input" id="thicknessInput">
+            <div id = "brushSize"></div>
+        </div>
+
+        <div class="input" id="sizeInput">
+            <div id="sizeSlider"></div>
+            <label for="sizeSlider" id="sliderLabel"></label>
+        </div>
+    </div>
+
+    <!-- Canvas Drawing Area     -->
+    <div id="canvasContainer">
+        <canvas id="paint" width="500px" height="400px"></canvas>
+    </div>
+
+    
+    <!-- button inputs area -->
+    <div id="buttonsContainer">
+        <div class="input2">
+            <span id="erase" class="button">Erase</span>
+        </div>
+           
+            <!--Save-->
+        <div class="input2">
+            <span id="save" class="button">Save</span>
+        </div>
+           
+            <!--Reset-->
+        <div class="input2">
+            <span id="reset" class="button">Reset</span>
+        </div>
+    </div>
+    <div>
+    </div>
+
+    <!-- Add a footer -->
+    <div class="footer">
+        <div class="container">
+            <p>&copy; Shivansh 2023</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- www.pixabay.com -->

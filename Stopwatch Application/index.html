@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Stopwatch Application</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>    
+   
+    <div class="container-fluid">
+        <div id="header">
+            Stopwatch
+        </div>
+    </div>
+
+    <!-- lap time -->
+    <div id="lap">
+        <span id="lapMinute">00</span>:
+        <span id="lapSecond">00</span>:
+        <span id="lapCentisecond">00</span>
+    </div>
+
+    <!-- Time  -->
+    <div id="time">
+        <span id="timeMinute">00</span>:
+        <span id="timeSecond">00</span>:
+        <span id="timeCentisecond">00</span>
+    </div>
+
+    <div class="row" id="controlsContainer">
+        <div class="col-xs-2 col-xs-offset-4">
+           <div id="startBtn" class="control">Start</div>
+           <div id="stopBtn" class="control">Stop</div>
+           <div id="resumeBtn" class="control">Resume</div>
+        </div>
+
+        <div class="col-xs-2">
+            <div id="lapBtn" class="control">Lap</div>
+            <div id="resetBtn" class="control">Reset</div>
+        </div>
+    </div>
+
+
+    <div id="laps">
+        
+
+    </div>
+
+
+
+    <!-- Add a footer -->
+    <div class="footer">
+        <div class="container">
+            <p>&copy; Shivansh 2023</p>
+        </div>
+    </div>
+</body>
+
+</html>

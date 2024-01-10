@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Shivansh Portfolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#myNavBar">    
+    <div class="video-container">
+        <video autoplay loop muted id="bgVideo" src="Video/pexels-pavel-danilyuk-5495892 (720p).mp4" type="video/mp4"></video>
+    </div> 
+
+    <!-- Create collapsible Navigation bar -->
+    <nav role="navigation" class="navbar navbar-custom navbar-fixed-top" id="myNavBar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Shivansh Sharma</a>
+                <button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>            
+
+            <div class="navbar-collapse collapse" id ="navbarCollapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+    <!-- Add a jumbotron headline for the page -->
+    <div class="jumbotron" id="home">
+        <div class="container">
+            <h1>Welcome to Shivansh's Portfolio :)</h1>
+            <h2>Software and Web developer </h2>
+           <!-- Create a button -->
+            <button type="button" class="btn btn-primary btn-lg"> Join me Now! </button>
+        </div>
+    </div>
+
+    <!-- Add the icons with description and link it to nav-item -->
+    <div id = "about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                        <img src="images/techie.png" alt="" class="aboutImage">
+                    <h2>Computer Engineering Technologist </h2>
+                    <p>I completed my two years diploma in May, 2023</p>
+                </div>
+                
+                <div class="col-md-4">
+                    <img src="images/foodie.png" alt="" class="aboutImage">
+                    <h2>Foodie</h2>
+                    <p>I love to cook and explore variety of vegetarian cuisines</p>
+                </div>
+                
+                <div class="col-md-4">
+                    <img src="images/badminton.png" alt="" class="aboutImage">
+                    <h2>Badminton Player</h2>
+                    <p>A competitive badminton player who is playing since childhood and have won many awards in tournaments</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Add a slideshow gallery content div -->
+    <div id="projects" class="container-fluid">
+        <div class="carousel slide" id = "myCarousel" data-ride= "carousel">
+
+            <!-- these are indicators of the current slide displaying -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- This helps in displaying the images in the carousel -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/VrGlove.jpg">
+                    <div class="carousel-caption">
+                        <h2>Virtual Reality 3D Glove Simulation</h2>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <img src="images/molar.png">
+                    <div class="carousel-caption">
+                        <h2>Molar mass calculator</h2>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/fruit_slice.png">
+                    <div class="carousel-caption">
+                        <h2>Fruit Slice Game</h2>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <img src="images/peach_goma.png">
+                    <div class="carousel-caption">
+                        <h2>The photo gallery of Peach and Goma</h2>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <img src="images/billionaires.png">
+                    <div class="carousel-caption">
+                        <h2>top 10 billionaires in the world</h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- These are for the controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div> 
+    <!-- Add a footer -->
+    <div class="footer">
+        <div class="container">
+            <p>&copy; Shivansh 2023</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- references
+https://www.pexels.com/search/videos/coding/
+
+-->
