@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+using System.Diagnostics;
+using System.Threading;
+using ConnLibrary;
+using SocketFrames;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
+namespace Client
+{
+    public partial class Client : Form
+    { 
+        private Socket objSocket = null;
+         
+        public Client()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_Connect_Click(object sender, EventArgs e)
+        {
+            ConnDialog cd = new ConnDialog(); //A new instance of the connection dialog
+            
+            //With all the fields in there
+            //It displays for now, if acc to the received data
+            //the connection is successful or not
+            if(cd.ShowDialog() == DialogResult.OK)
+            {
+                objSocket = cd.Soc;
+                Trace.WriteLine($"{objSocket.Connected}");
+                if (objSocket != null && objSocket.Connected)
+                {
+                    this.Text = "Connection Successfull!";
+                    btn_Guess.Click += Btn_Guess_Click;
+                }
+                else
+                    this.Text = "Connection Unsuccessful!";
+            }
+        }
+
+
+        private void Btn_Guess_Click(object sender, EventArgs e)
+        {
+            //byte[] data = new byte[5] { 42, 43, 4, 5, 2 }; //sample array of bytes
+            var tbarValue = tbar_Guess.Value;
+
+            CSocketFrame frame = new CSocketFrame(tbarValue);
+            MemoryStream ms = new MemoryStream();
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(ms, frame);
+
+            //objSocket.Send(data, 0, 5, SocketFlags.None);
+            objSocket.Send(ms.GetBuffer(), (int)ms.Length, SocketFlags.None);
+        }
+
+        private void tbar_Guess_Scroll(object sender, EventArgs e)
+        {
+            var tbarValue = tbar_Guess.Value;
+            lbl_GuessVal.Text = tbarValue.ToString();
+        }
+    }
+}

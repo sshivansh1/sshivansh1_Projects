@@ -1,0 +1,167 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Diagnostics;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
+using SocketFrames;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;
+
+namespace Server
+{
+    public partial class Server : Form
+    {
+        private Socket listSocket = null; //Initialization of a listening socket object to null
+        private Socket connSocket = null;
+        private Thread Rx_Thread= null;
+
+        //A delegate reference
+        //private delegate void delVoidByteData(byte[] buff_data);
+
+        private static Random _rand = new Random();
+
+        public Server()
+        {
+            InitializeComponent();
+            this.Text = "Server";
+        }
+
+        private void Server_Load(object sender, EventArgs e)
+        {
+            this.Text = "Server is listening here";
+            tb_RndGuessNum.ReadOnly = true;
+            listSocket = new Socket(
+            AddressFamily.InterNetwork,//uses IP V4
+            SocketType.Stream, //streaming socket
+            ProtocolType.Tcp //transmission protocol
+            );
+
+            try
+            {
+                // bind the socket to the endpoint (any interface, port 1666)
+                listSocket.Bind(new IPEndPoint(IPAddress.Any, 1666));
+            }
+            catch (Exception ex)
+            {
+                Trace.WriteLine($"Unable to bind! {ex.Message}");
+            }
+
+            // start listening
+            listSocket.Listen(5);
+
+            // start waiting for a connection...
+            listSocket.BeginAccept(CallBack_ConnectAccept, null);
+        }
+
+
+        private void CallBack_ConnectAccept(IAsyncResult ar)
+        {
+            //pull the listening socket from the args (state)
+            //Socket lsok = (Socket)(ar.AsyncState);
+            try
+            {
+                //also saving a new socket to a member
+                connSocket = listSocket.EndAccept(ar); //create the connected socket (by terminating the accept process)
+
+                //A seperate delegate method can be created as well
+                Invoke(new Action(() => Text = "Connected!")); //Changes the text of the form
+
+                Rx_Thread = new Thread(RXBody);
+                Rx_Thread.IsBackground = true;
+                Rx_Thread.Start();
+            }
+            catch (SocketException err)
+            {
+                Trace.WriteLine($"Cannot accept {err.Message}!");
+                Invoke(new Action(() => Text = "Bad!"));
+            }
+        }
+
+        //private void DataProcessFunc(byte[] myDataBuffer)
+        //{
+        //    Text = myDataBuffer.Length.ToString(); //The size of the byte array sent to the server
+        //    tb_RndGuessNum.Clear();
+        //    foreach (var item in myDataBuffer)
+        //    {
+        //        tb_RndGuessNum.Text += item.ToString() + ", ";
+        //    }
+        //}
+
+
+        //Connected Socket always in Rx State
+        private void RXBody()
+        {
+            byte[] buff = new byte[1000];
+
+            while (true)
+            {
+                try
+                {
+                    //block on receive - will throw on hard disco
+                    int iNumBytesRxED = connSocket.Receive(buff); //Receives int number of bytes and send into a buffer
+                    Trace.WriteLine(iNumBytesRxED);
+
+                    if (iNumBytesRxED == 0)
+                    {
+                        // soft disco (user explicitly shut down socket)
+                        // handle shutdown of socket
+                        // bring listener back up
+                        return;
+                    }
+
+                    /*************         [ Method One ]        ****************
+                    * ------  Using the Binary Formatter to Deserialize the recieved data  ----
+                    *   
+                    *   BinaryFormatter bf = new BinaryFormatter();
+                    *   MemoryStream m = new MemoryStream(buff);
+                    *   CSocketFrame frame = (CSocketFrame)bf.Deserialize(m);
+                    *   actually got data!
+                    *   Invoke(new Action(() => this.Text = $"The tb bar value on the client side is : {frame.iData}"));
+                    *   
+                    * ************************************************************/
+
+                    string sRX = Encoding.UTF8.GetString(buff);
+                    CSocketFrame myData = JsonConvert.DeserializeObject<CSocketFrame>(sRX);
+                    Invoke(new Action(() => this.Text = $"The client trackbar value is : {myData.iData}"));
+
+
+
+
+                    //Random server number picked on accept complete
+                    int randNum = _rand.Next(0, 1001);
+                    Invoke(new Action(() => tb_RndGuessNum.Text = randNum.ToString()));
+
+                }
+                catch (Exception err)
+                {
+                    System.Diagnostics.Trace.WriteLine($"RXBody : {err.Message}");
+                    // hard disconnect (other user hung up)                    
+                    // handle shutdown of socket
+                    // bring listener back up
+                    return;
+                }
+            }
+        }
+    }
+}
+
+/*
+*   ******     other ways of doing the same       *****
+* 
+* Invoke(new Action<int, string>((i, y) => Text = $"I got {i} bytes! from {y}"), iNumBytesRxED, "shivansh");
+* Invoke(new Action(() => this.Text = $"recieved bytes : {iNumBytesRxED}"));
+* Invoke(new Action(() => label1.Text = "Shivansh"));
+* Invoke(new delVoidByteData(DataProcessFunc), buff);
+* Invoke(new Action<byte[]>((x) => label1.Text = x.ToString()), buff);
+* 
+*   **************     End     ***************
+*/

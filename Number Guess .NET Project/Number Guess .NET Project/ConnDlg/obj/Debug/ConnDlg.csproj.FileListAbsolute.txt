@@ -1,0 +1,10 @@
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\obj\Debug\ConnDlg.csproj.AssemblyReference.cache
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\obj\Debug\ConnDlg.ConnDlg.resources
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\obj\Debug\ConnDlg.csproj.GenerateResource.cache
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\obj\Debug\ConnDlg.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\bin\Debug\ConnDialolg.dll.config
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\bin\Debug\ConnDialolg.dll
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\bin\Debug\ConnDialolg.pdb
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\obj\Debug\ConnLibrary.Properties.Resources.resources
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\obj\Debug\ConnDialolg.dll
+C:\Users\ASUS\OneDrive - NAIT\myNew2800\Shivansh_Cmpe2800_NumGuess\ConnDlg\obj\Debug\ConnDialolg.pdb

@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Diagnostics;
+using System.Net;
+using System.Net.Sockets;
+namespace Server
+{
+    public partial class Server : Form
+    {
+        private Socket listSocket = null; //Initialization of a listening socket object to null
+        private Socket connSocket = null;
+        public Server()
+        {
+            InitializeComponent();
+        }
+
+        private void Server_Load(object sender, EventArgs e)
+        {
+            Trace.WriteLine("The Server is here");
+
+            listSocket = new Socket(
+            AddressFamily.InterNetwork,//uses IP V4
+            SocketType.Stream, //streaming socket
+            ProtocolType.Tcp //transmission protocol
+            );
+
+            try
+            {
+                // bind the socket to the endpoint (any interface, port 1666)
+                listSocket.Bind(new IPEndPoint(IPAddress.Any, 1666));
+            }
+            catch (Exception ex)
+            {
+                Trace.WriteLine($"Unable to bind! {ex.Message}");
+            }
+
+            // start listening
+            listSocket.Listen(5);
+
+            // start waiting for a connection...
+            listSocket.BeginAccept(CallBack_ConnectAccept, null);
+        }
+
+        private void CallBack_ConnectAccept(IAsyncResult ar)
+        {
+            //pull the listening socket from the args (state)
+            //Socket lsok = (Socket)(ar.AsyncState);
+            try
+            {
+                connSocket = listSocket.EndAccept(ar); //create the connected socket (by terminating the accept process)
+
+                //A seperate delegate method can be created as well
+                Invoke(new Action(() => Text = "Connected!")); //Changes the text of the form
+            }
+            catch (SocketException err)
+            {
+                Trace.WriteLine($"Cannot accept {err.Message}!");
+                Invoke(new Action(() => Text = "Bad!"));
+            }
+        }
+
+
+    }
+}   

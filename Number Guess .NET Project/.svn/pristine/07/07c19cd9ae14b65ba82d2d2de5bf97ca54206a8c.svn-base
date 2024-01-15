@@ -1,0 +1,125 @@
+﻿
+namespace Client
+{
+    partial class Client
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btn_Connect = new System.Windows.Forms.Button();
+            this.tbar_Guess = new System.Windows.Forms.TrackBar();
+            this.tb_Status = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_Guess = new System.Windows.Forms.TextBox();
+            this.btn_Disconnect = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.tbar_Guess)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btn_Connect
+            // 
+            this.btn_Connect.Location = new System.Drawing.Point(23, 21);
+            this.btn_Connect.Name = "btn_Connect";
+            this.btn_Connect.Size = new System.Drawing.Size(129, 38);
+            this.btn_Connect.TabIndex = 0;
+            this.btn_Connect.Text = "Connect";
+            this.btn_Connect.UseVisualStyleBackColor = true;
+            this.btn_Connect.Click += new System.EventHandler(this.btn_Connect_Click);
+            // 
+            // tbar_Guess
+            // 
+            this.tbar_Guess.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tbar_Guess.Location = new System.Drawing.Point(47, 81);
+            this.tbar_Guess.Name = "tbar_Guess";
+            this.tbar_Guess.Size = new System.Drawing.Size(423, 45);
+            this.tbar_Guess.TabIndex = 1;
+            // 
+            // tb_Status
+            // 
+            this.tb_Status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_Status.Location = new System.Drawing.Point(83, 204);
+            this.tb_Status.Name = "tb_Status";
+            this.tb_Status.ReadOnly = true;
+            this.tb_Status.Size = new System.Drawing.Size(180, 20);
+            this.tb_Status.TabIndex = 2;
+            this.tb_Status.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 211);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Status: ";
+            // 
+            // tb_Guess
+            // 
+            this.tb_Guess.Location = new System.Drawing.Point(332, 203);
+            this.tb_Guess.Name = "tb_Guess";
+            this.tb_Guess.Size = new System.Drawing.Size(166, 20);
+            this.tb_Guess.TabIndex = 4;
+            this.tb_Guess.Text = "Guess";
+            this.tb_Guess.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btn_Disconnect
+            // 
+            this.btn_Disconnect.Location = new System.Drawing.Point(341, 21);
+            this.btn_Disconnect.Name = "btn_Disconnect";
+            this.btn_Disconnect.Size = new System.Drawing.Size(129, 38);
+            this.btn_Disconnect.TabIndex = 5;
+            this.btn_Disconnect.Text = "Disconnect";
+            this.btn_Disconnect.UseVisualStyleBackColor = true;
+            // 
+            // Client
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(523, 249);
+            this.Controls.Add(this.btn_Disconnect);
+            this.Controls.Add(this.tb_Guess);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tb_Status);
+            this.Controls.Add(this.tbar_Guess);
+            this.Controls.Add(this.btn_Connect);
+            this.Name = "Client";
+            this.Text = "Client";
+            ((System.ComponentModel.ISupportInitialize)(this.tbar_Guess)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btn_Connect;
+        private System.Windows.Forms.TrackBar tbar_Guess;
+        private System.Windows.Forms.TextBox tb_Status;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tb_Guess;
+        private System.Windows.Forms.Button btn_Disconnect;
+    }
+}
+

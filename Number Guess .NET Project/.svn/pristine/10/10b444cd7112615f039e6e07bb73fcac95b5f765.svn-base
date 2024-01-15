@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+using System.Diagnostics;
+using System.Threading;
+
+namespace Client
+{
+    public partial class Client : Form
+    {
+        //Creating a client socket object for connection
+        private Socket objSocket = new Socket(
+            AddressFamily.InterNetwork,
+            SocketType.Stream,
+            ProtocolType.Tcp //transmission protocol
+            );
+        
+        //private Socket objSocket = new Socket()
+        public Client()
+        {
+            InitializeComponent();
+            
+        }
+
+        private void btn_Connect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Socket connection attempt asynchronously 
+                objSocket.BeginConnect(
+                    "microsoft.com",            //The address to connect to
+                    80,                  //The Port number (int)
+                    CallBack_ConnectDone, //This is the call back function
+                    42);                  //Passed in with the call back function
+            }
+            catch (SocketException err)
+            {
+                this.Text = "On connection button click : " + err.Message;
+                //MessageBox.Show(err.Message, "Connection Failure...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        //If I begin the connect, I have to end it as well.
+        //This will run on a different thread
+        private void CallBack_ConnectDone(IAsyncResult ar)
+        {
+            Trace.WriteLine("The fourth paramter passed is : " + (int)ar.AsyncState);
+            try
+            {
+                objSocket.EndConnect(ar);
+                Invoke(new Action(() => this.Text = "Connected Successfully"));
+            }
+            catch(Exception err)
+            {
+                Invoke(new Action<string>((param) => this.Text = $"Not Connected! {param}"), err.Message);
+            }
+        }
+    }
+}

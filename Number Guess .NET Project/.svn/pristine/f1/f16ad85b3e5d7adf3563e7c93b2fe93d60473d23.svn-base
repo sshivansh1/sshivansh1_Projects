@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+using System.Diagnostics;
+
+namespace ConnLibrary
+{
+    public partial class ConnDialog : Form
+    {
+        public Socket Soc { get; private set; } //Only set to retrieve the latest value
+
+        //Acts like a form Dialog for us
+        public ConnDialog()
+        {
+            InitializeComponent();
+        }
+
+        //When the connect button on the Form triggers, 
+        //It creates a new socket object which attempt for an asychronous connection
+        private void btn_Connect_Click(object sender, EventArgs e)
+        {
+            //Creating a client socket object for connection
+            Soc = new Socket(
+            AddressFamily.InterNetwork,
+            SocketType.Stream,
+            ProtocolType.Tcp //transmission protocol
+            );
+
+            //For testing purposes, I have set the readonly property of the textbox to false
+            try
+            {
+                //Socket connection attempt asynchronously 
+                Soc.BeginConnect(
+                    tb_Address.Text,            //The address to connect to
+                    Convert.ToInt32(tb_Port.Text),    //The Port number (int)
+                    CallBack_ConnectDone, //This is the call back function
+                    42);                  //Passed in with the call back function
+            }
+            catch (SocketException err)
+            {
+                MessageBox.Show(err.Message, "Connection Failure...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }                                            
+        }
+
+        //If I begin the connect, I have to end it as well.
+        //This will run on a different thread
+        private void CallBack_ConnectDone(IAsyncResult ar)
+        {
+            Trace.WriteLine("The fourth paramter passed is : " + (int)ar.AsyncState);
+            try
+            {
+                //IPAddress ipAddress = ipHostInfo.AddressList[0];
+                //Console.WriteLine(ipAddress.ToString());
+                Soc.EndConnect(ar);
+                Invoke(new Action(() => this.Text = "Connected Successfully")); //A delegate can also be passed but this is fairly easy
+                Trace.WriteLine("Connected Successfully"); //A delegate can also be passed but this is fairly easy
+                Invoke(new Action(() => this.DialogResult = DialogResult.OK)); //Perform the Ok Action
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Connection Failure...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Invoke(new Action<string>((param) => this.Text = $"Not Connected! {param}"), err.Message);
+                Invoke(new Action(() => this.DialogResult = DialogResult.OK)); //Perform the Ok Action
+            }
+        }
+    }
+}
