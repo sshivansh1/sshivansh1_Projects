@@ -28,7 +28,9 @@ namespace MolarMassCalculator_MoShivKP
             string path = $@"{Path.GetFullPath(new DirectoryInfo(Environment.CurrentDirectory).FullName)}..\..\..\periodic-table-of-elements.xml";
 
             periodicTable.Load(path);
-       
+            
+            
+
             UI_DGV_elementsDisplay.ColumnCount = 4;
             UI_DGV_elementsDisplay.Columns[0].Name = "Atomic #";
             UI_DGV_elementsDisplay.Columns[1].Name = "Name";

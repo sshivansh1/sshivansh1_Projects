@@ -44,6 +44,7 @@ function mysqlConnect()
     }
 }
 
+
 //Query will be probably a string
 function mysqlQuery($query)//use the query to bounce off the database
 {
@@ -62,6 +63,7 @@ function mysqlQuery($query)//use the query to bounce off the database
     }
     return $result;//Object
 }
+
 
 //Not expecting data back, only message back
 function mysqlNonQuery($query)
@@ -89,3 +91,4 @@ function mysqlNonQuery($query)
     -1 indicates that the query returned an error or that mysqli_affected_rows() was called for an unbuffered SELECT query.
     */
 }
+

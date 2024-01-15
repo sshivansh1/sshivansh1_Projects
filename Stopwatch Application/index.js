@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    var myTimer = 0;
-    var timeCounter = 0;
+    var myTimer = 0; // used to set or clear the interval
+    var timeCounter = 0; //global timer counter updates by 10ms
     var lapCounter = 0;
     var timeMin, timeSec, timeCentiSec, lapMin, lapSec, lapCentiSec;
     var isMode = false;
@@ -8,13 +8,13 @@ $(document).ready(function(){
     HideShowButtons("#startBtn", "#lapBtn");
     //Click Start
     $("#startBtn").click(function (e) { 
-        isMode = true;
+        isMode = true; //app is running
         //Will change the button to 'stop'
         HideShowButtons("#stopBtn", "#lapBtn");
         //Will start_interval the stopwatch timer
         //and the lap timer
         StartTimer();
-    });
+    }); 
 
     //Click Stop
     //stop_interval for the stopwatch timer
@@ -70,6 +70,7 @@ $(document).ready(function(){
     function StartTimer() {
         myTimer = setInterval(() => {
             timeCounter++;
+            // the max my timer can reach upto after which it rolls back to 0
             if(timeCounter == 100*60*100)
                 timeCounter = 0;
             if(lapCounter == 100*60*100)

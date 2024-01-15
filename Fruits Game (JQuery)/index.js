@@ -18,11 +18,11 @@
                         //change the button name to start
                    
                     
-var isPlaying = false;
-var score;
-var lives;
-var fruitsArr = ['apple', 'banana', 'pineapple', 'grapes', 'mango', 'orange', 'strawberry', 'watermelon'];
-var step;
+var isPlaying = false; // are we playing?
+var score; // total score updates on the fruit slice by the user  
+var lives; //display of the current number of lives left
+var fruitsArr = ['apple', 'banana', 'pineapple', 'grapes', 'mango', 'orange', 'strawberry', 'watermelon']; //an array to randomly generate fruits
+var step; //animation for the fruit
 
 $(document).ready(function(){
    // if Sliced
@@ -48,7 +48,6 @@ $(document).ready(function(){
             isPlaying = true;
             $("#idLives").show();
             // or $("#idLives").css("display", "block");
-
             score = 0;
             lives = 3; //Initially we have three lives
             $("#idScoreVal").html(score);
@@ -90,8 +89,8 @@ function PlayFruits()
     GenerateFruits();
     action = setInterval(function(){
         $("#idScore").html("Score: " + score);
-        $("#idFruit").css("top",  $("#idFruit").position().top + step + "px")
-        // Check if too low(if left)
+        $("#idFruit").css("top",  $("#idFruit").position().top + step + "px")//set the speed of fruit
+        // Check if too low(if left the container)
         if ($("#idFruit").position().top > $("#idGameArea").height())
         {
             if(lives > 1)
@@ -105,7 +104,7 @@ function PlayFruits()
             {
                 lives = 0;
                 isPlaying = false
-                RemainingLives(lives);
+                RemainingLives(lives); //for display of hearts/lives
                 clearInterval(action);
                 $("#idGameOver").html("Game Over! </br> Your Score is: " + score);
                 $("#idGameOver").show();
