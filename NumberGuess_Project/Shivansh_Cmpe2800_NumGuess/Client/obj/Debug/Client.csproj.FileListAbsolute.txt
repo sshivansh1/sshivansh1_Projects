@@ -1,5 +1,0 @@
-C:\Users\shiva\Documents\GitHub\sshivansh1_Projects\NumberGuess_Project\Shivansh_Cmpe2800_NumGuess\Client\obj\Debug\Client.csproj.AssemblyReference.cache
-C:\Users\shiva\Documents\GitHub\sshivansh1_Projects\NumberGuess_Project\Shivansh_Cmpe2800_NumGuess\Client\obj\Debug\Client.Client.resources
-C:\Users\shiva\Documents\GitHub\sshivansh1_Projects\NumberGuess_Project\Shivansh_Cmpe2800_NumGuess\Client\obj\Debug\Client.Properties.Resources.resources
-C:\Users\shiva\Documents\GitHub\sshivansh1_Projects\NumberGuess_Project\Shivansh_Cmpe2800_NumGuess\Client\obj\Debug\Client.csproj.GenerateResource.cache
-C:\Users\shiva\Documents\GitHub\sshivansh1_Projects\NumberGuess_Project\Shivansh_Cmpe2800_NumGuess\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
